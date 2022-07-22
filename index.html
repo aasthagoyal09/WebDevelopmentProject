@@ -18,74 +18,77 @@
       background-repeat: no-repeat;
     }
     #heading {
-        margin-top: 5  0px;
+        margin-top: 30px;
       text-align: center;
+      font-size: 40px;
     }
     #container {
-      background-color: antiquewhite;
-      width: 600px;
-      height: 400px;
+      background-color: rgb(166, 164, 160);
+      width: 550px;
+      height: 450px;
       text-align: center;
       border-radius: 10px;
-      margin: 15px auto 0px auto;
+      margin: 80px auto 0px auto;
       padding: 20px;
       top: 50%;
       left: 50%;
+      border: 1px solid black;
+      box-shadow: 3px  3px rgb(70, 2, 2);
     }
     .fi {
         display: inline-block;
     }
     .in {
-        height: 25px;
-      padding: 2px 12px;
-      margin: 5px;
-      font-size: 20px;
-      font-weight: bold;
-      width: 150px;
+        height: 28px;
+      font-size: 15px;
+      width: 195px;
       text-align: center;
-      border-radius: 10px;
-      margin-bottom: 0%;
+      border-radius: 5px;
+      margin-bottom: 20px;
     }
-    label #i{
-        margin-left: 30px;
-        margin-top: 0px;
-    }
-     label #f{
-        margin-left: 10px;
-    }
-    input {
+    input{
+      margin-top: 15px;
+      box-shadow: 1px  2px black;
       height: 25px;
-      width: 200px;
+      width: 195px;
       text-align: center;
       font-size: 15px;
     }
-    #input {
+    span{
+      font-size: larger;
+      font-weight: bolder;
+    }
+    #input ,
+    #wtinput,#tinput{
       margin-left: 25px;
     }
     #inptype,
-    #restype {
+    #restype,#winptype,
+    #wrestype,#tinptype,
+    #trestype {
       width: 200px;
       margin-left: 25px;
       text-align: center;
-      color: blueviolet;
+      color: rgb(144, 30, 250);
       font-weight: bold;
-      
+      margin-bottom: 20px;
     }
-    #restype {
+    #restype ,#wrestype,#trestype{
       margin-left: 12.5px;
+    }
+    h2{
+      font-weight: bold;
     }
   </style>
   <body >
     <div class="whole">
-    <h1 id="heading">Unit converter</h1>
+    <h1 id="heading"><u>Unit converter</u></h1>
     <div id="container">
+      <h2>Feet to Inches</h2>
       <div class="fi">
-        
-        <input type="number" class="in" id="feet" /><span>=</span>
-        <input type="number" class="in" id="inch" /><br>
-        <label class="label" id="f">Feet </label>
-        
-        <label class="label" id="i">Inches</label>
+        <input type="number"  placeholder="feet" class="in" id="feet" />
+        <span>=</span>
+        <input type="number" placeholder="inches" class="in" id="inch" />  
       </div>
       <!-- ------------ -->
       <h2>Length</h2>
@@ -118,6 +121,43 @@
         <input type="text" placeholder="result" id="wtresult">
 
       </div>
+      <select id="winptype">
+        <option value="kg">Kilogram</option>
+        <option value="g">Gram</option>
+        <option value="t">Tonne</option>
+        <option value="p">Pound</option>
+        <option value="o">Ounce</option>
+      </select>
+      <select id="wrestype">
+        <option value="kg">Kilogram</option>
+        <option value="g">Gram</option>
+        <option value="t">Tonne</option>
+        <option value="p">Pound</option>
+        <option value="o">Ounce</option>
+      </select>
+
+      <h2>Time</h2>
+      <div class="time">
+        <input type="text" placeholder="input" id="tinput">
+        <span>=</span>
+        <input type="text" placeholder="result" id="tresult">
+      </div>
+      <select id="tinptype">
+        <option value="s">Seconds</option>
+        <option value="m">Minutes</option>
+        <option value="h">Hours</option>
+        <option value="d">Days</option>
+        <option value="w">Weeks</option>
+        <option value="y">Years</option>
+      </select>
+      <select id="trestype">
+        <option value="s">Seconds</option>
+        <option value="m">Minutes</option>
+        <option value="h">Hours</option>
+        <option value="d">Days</option>
+        <option value="w">Weeks</option>
+        <option value="y">Years</option>
+      </select>
     </div></div>
     <script src="unit.js"></script>
   </body>
