@@ -1,20 +1,49 @@
-var feet = document.getElementById("feet");
-      var inch = document.getElementById("inch");
-      feet.addEventListener("input", function () {
-        let f = this.value;
-        let i = f * 12;
-        inch.value = i;
-      });
-      var feet = document.getElementById("feet");
-      var inch = document.getElementById("inch");
-      inch.addEventListener("input", function () {
-        let i = this.value;
-        let f = i / 12;
-        if (!Number.isInteger(f)) {
-          f = f.toFixed(2);
-        }
-        feet.value = f;
-      });
+var kinput=document.getElementById('kinput');
+var kresult=document.getElementById('kresult');
+var kinptype=document.getElementById('kinptype');
+var krestype=document.getElementById('krestype');
+var kivalue,krvalue;
+kinput.addEventListener("keyup",func1);
+kinptype.addEventListener("change",func1);
+krestype.addEventListener("change",func1);
+kivalue=kinptype.value;
+krvalue=krestype.value;
+
+function func1(){
+    kivalue=kinptype.value;
+    krvalue=krestype.value;
+    
+    if(kivalue=="ce" && krvalue=="fa"){
+        kresult.value=Number(kinput.value)*33.8;
+    }
+    else if(kivalue=="ce" && krvalue=="ke"){
+        kresult.value=Number(kinput.value)*274.15;
+    }
+    else if(kivalue=="ce" && krvalue=="ce"){
+        kresult.value=Number(kinput.value);
+    }
+
+    if(kivalue=="fa" && krvalue=="ce"){
+        kresult.value=Number(kinput.value)*-17.22;
+    }
+    else if(kivalue=="fa" && krvalue=="ke"){
+        kresult.value=Number(kinput.value)*255.927;
+    }
+    else if(kivalue=="fa" && krvalue=="fa"){
+        kresult.value=Number(kinput.value);
+    }
+
+    if(kivalue=="ke" && krvalue=="fa"){
+        kresult.value=Number(kinput.value)*-457.87;
+    }
+    else if(kivalue=="ke" && krvalue=="ce"){
+        kresult.value=Number(kinput.value)*-272.15;
+    }
+    else if(kivalue=="ke" && krvalue=="ke"){
+        kresult.value=Number(kinput.value);
+    }
+}
+
 
 
 
@@ -23,13 +52,13 @@ var result=document.getElementById('result');
 var inptype=document.getElementById('inptype');
 var restype=document.getElementById('restype');
 var ivalue,rvalue;
-input.addEventListener("keyup",func);
-inptype.addEventListener("change",func);
-restype.addEventListener("change",func);
+input.addEventListener("keyup",funcc);
+inptype.addEventListener("change",funcc);
+restype.addEventListener("change",funcc);
 ivalue=inptype.value;
 rvalue=restype.value;
 
-function func(){
+function funcc(){
     ivalue=inptype.value;
     rvalue=restype.value;
     
@@ -121,13 +150,13 @@ var wresult=document.getElementById('wtresult');
 var winptype=document.getElementById('winptype');
 var wrestype=document.getElementById('wrestype');
 var wivalue,wrvalue;
-winput.addEventListener("keyup",func);
-winptype.addEventListener("change",func);
-wrestype.addEventListener("change",func);
+winput.addEventListener("keyup",func2);
+winptype.addEventListener("change",func2);
+wrestype.addEventListener("change",func2);
 wivalue=winptype.value;
 wrvalue=wrestype.value;
 
-function func(){
+function func2(){
     wivalue=winptype.value;
     wrvalue=wrestype.value;
     
