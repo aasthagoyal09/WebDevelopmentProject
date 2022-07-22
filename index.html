@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+  </head>
+  <style>
+    * {
+      padding: 0%;
+      margin: 0px;
+    }
+    body {
+      font-family: serif;
+      background: url("scale\ image.png");
+      background-size: cover;
+    }
+    #heading {
+        margin-top: 5  0px;
+      text-align: center;
+    }
+    #container {
+      background-color: antiquewhite;
+      width: 600px;
+      height: 400px;
+      text-align: center;
+      border-radius: 10px;
+      margin: 15px auto 0px auto;
+      padding: 20px;
+      top: 50%;
+      left: 50%;
+    }
+    .fi {
+        display: inline-block;
+    }
+    .in {
+        height: 25px;
+      padding: 2px 12px;
+      margin: 5px;
+      font-size: 20px;
+      font-weight: bold;
+      width: 150px;
+      text-align: center;
+      border-radius: 10px;
+      margin-bottom: 0%;
+    }
+    label #i{
+        margin-left: 30px;
+        margin-top: 0px;
+    }
+     label #f{
+        margin-left: 10px;
+    }
+    input {
+      height: 25px;
+      width: 200px;
+      text-align: center;
+      font-size: 15px;
+    }
+    #input {
+      margin-left: 25px;
+    }
+    #inptype,
+    #restype {
+      width: 200px;
+      margin-left: 25px;
+      text-align: center;
+      color: blueviolet;
+      font-weight: bold;
+      
+    }
+    #restype {
+      margin-left: 12.5px;
+    }
+  </style>
+  <body >
+    <div class="whole">
+    <h1 id="heading">Unit converter</h1>
+    <div id="container">
+      <div class="fi">
+        
+        <input type="number" class="in" id="feet" /><span>=</span>
+        <input type="number" class="in" id="inch" /><br>
+        <label class="label" id="f">Feet </label>
+        
+        <label class="label" id="i">Inches</label>
+      </div>
+      <!-- ------------ -->
+      <h2>Length</h2>
+      <div class="input">
+        <input type="text" placeholder="input" id="input" />
+        <span>=</span>
+        <input type="text" placeholder="result" id="result" />
+      </div>
+
+      <select id="inptype">
+        <option value="Meter">Meter</option>
+        <option value="KiloMeter">KiloMeter</option>
+        <option value="DeciMeter">DeciMeter</option>
+        <option value="CentiMeter">CentiMeter</option>
+        <option value="MilliMeter">MilliMeter</option>
+      </select>
+
+      <select id="restype">
+        <option value="Meter">Meter</option>
+        <option value="KiloMeter">KiloMeter</option>
+        <option value="DeciMeter">DeciMeter</option>
+        <option value="CentiMeter">CentiMeter</option>
+        <option value="MilliMeter">MilliMeter</option>
+      </select>
+      <h2>Weight</h2>
+
+      <div class="weight">
+        <input type="text" placeholder="input" id="wtinput">
+        <span>=</span>
+        <input type="text" placeholder="result" id="wtresult">
+        
+      </div>
+    </div></div>
+    <script src="unit.js"></script>
+  </body>
+</html>
