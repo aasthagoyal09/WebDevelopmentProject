@@ -14,7 +14,7 @@ function func1() {
   krvalue = krestype.value;
 
   if (kivalue == "ce" && krvalue == "fa") {
-    kresult.value = ((Number(kinput.value) * 9)/5) + 32;
+    kresult.value = (Number(kinput.value) * 9) / 5 + 32;
   } else if (kivalue == "ce" && krvalue == "ke") {
     kresult.value = Number(kinput.value) + 273.15;
   } else if (kivalue == "ce" && krvalue == "ce") {
@@ -22,15 +22,17 @@ function func1() {
   }
 
   if (kivalue == "fa" && krvalue == "ce") {
-    kresult.value = ((Number(kinput.value) - 32) * 5) / 9;
+    fah= ((Number(kinput.value) - 32) * 5) / 9;
+    kresult.value =fah.toFixed(3);
   } else if (kivalue == "fa" && krvalue == "ke") {
-    kresult.value = ((Number(kinput.value) - 32) * 5) / 9 + 273.15;
+    fah = ((Number(kinput.value) - 32) * 5) / 9 + 273.15;
+    kresult.value =fah.toFixed(3);
   } else if (kivalue == "fa" && krvalue == "fa") {
     kresult.value = Number(kinput.value);
   }
 
   if (kivalue == "ke" && krvalue == "fa") {
-    kresult.value = (Number(kinput.value) - 273) * 1.8 + 32;
+    kresult.value = ((Number(kinput.value) - 273) * 9) / 5 + 32;
   } else if (kivalue == "ke" && krvalue == "ce") {
     kresult.value = Number(kinput.value) - 273.15;
   } else if (kivalue == "ke" && krvalue == "ke") {
@@ -146,7 +148,7 @@ function func2() {
   } else if (wivalue == "g" && wrvalue == "t") {
     wresult.value = Number(winput.value) * 0.000001;
   } else if (wivalue == "g" && wrvalue == "p") {
-    wresult.value = Number(winput.value) * 0.00220462;
+    wresult.value = Number(winput.value) * 0.002204;
   } else if (wivalue == "g" && wrvalue == "o") {
     wresult.value = Number(winput.value) * 0.035274;
   } else if (wivalue == "g" && wrvalue == "g") {
@@ -168,9 +170,9 @@ function func2() {
   if (wivalue == "p" && wrvalue == "g") {
     wresult.value = Number(winput.value) * 453.592;
   } else if (wivalue == "p" && wrvalue == "t") {
-    wresult.value = Number(winput.value) * 0.000453592;
+    wresult.value = Number(winput.value) * 0.00045;
   } else if (wivalue == "p" && wrvalue == "kg") {
-    wresult.value = Number(winput.value) * 0.453592;
+    wresult.value = Number(winput.value) * 0.4536;
   } else if (wivalue == "p" && wrvalue == "o") {
     wresult.value = Number(winput.value) * 16;
   } else if (wivalue == "p" && wrvalue == "p") {
@@ -180,11 +182,11 @@ function func2() {
   if (wivalue == "o" && wrvalue == "g") {
     wresult.value = Number(winput.value) * 28.35;
   } else if (wivalue == "o" && wrvalue == "t") {
-    wresult.value = Number(winput.value) * 0.00002835;
+    wresult.value = Number(winput.value) * 0.000028;
   } else if (wivalue == "o" && wrvalue == "p") {
     wresult.value = Number(winput.value) * 0.0625;
   } else if (wivalue == "o" && wrvalue == "kg") {
-    wresult.value = Number(winput.value) * 0.0283495;
+    wresult.value = Number(winput.value) * 0.02834;
   } else if (wivalue == "o" && wrvalue == "o") {
     wresult.value = Number(winput.value);
   }
@@ -206,15 +208,20 @@ function func() {
   trvalue = trestype.value;
 
   if (tivalue == "s" && trvalue == "m") {
-    tresult.value = Number(tinput.value) /60;
+     fr=Number(tinput.value) / 60;
+     tresult.value =fr.toFixed(2);
   } else if (tivalue == "s" && trvalue == "h") {
-    tresult.value = Number(tinput.value) /3600;
+    fr= Number(tinput.value) / 3600;
+    tresult.value =fr.toFixed(4);
   } else if (tivalue == "s" && trvalue == "d") {
-    tresult.value = Number(tinput.value) /86400;
+    fr = Number(tinput.value) / 86400;
+    tresult.value =fr.toFixed(6);
   } else if (tivalue == "s" && trvalue == "w") {
-    tresult.value = Number(tinput.value) /604800;
+    fr = Number(tinput.value) / 604800;
+    tresult.value =fr.toFixed(7);
   } else if (tivalue == "s" && trvalue == "y") {
-    tresult.value = Number(tinput.value) /31536000;
+    fr = Number(tinput.value) / 31536000;
+    tresult.value =fr.toFixed(8);
   } else if (tivalue == "s" && trvalue == "s") {
     tresult.value = Number(tinput.value);
   }
@@ -222,13 +229,17 @@ function func() {
   if (tivalue == "m" && trvalue == "s") {
     tresult.value = Number(tinput.value) * 60;
   } else if (tivalue == "m" && trvalue == "h") {
-    tresult.value = Number(tinput.value) /60;
+     mn= Number(tinput.value) / 60;
+     tresult.value=mn.toFixed(3);
   } else if (tivalue == "m" && trvalue == "d") {
-    tresult.value = Number(tinput.value) /1440;
+    mn = Number(tinput.value) / 1440;
+    tresult.value=mn.toFixed(4);
   } else if (tivalue == "m" && trvalue == "w") {
-    tresult.value = Number(tinput.value) /10080;
+    mn = Number(tinput.value) / 10080;
+    tresult.value=mn.toFixed(5);
   } else if (tivalue == "m" && trvalue == "y") {
-    tresult.value = Number(tinput.value) /525600;
+    mn = Number(tinput.value) / 525600;
+    tresult.value=mn.toFixed(6);
   } else if (tivalue == "m" && trvalue == "m") {
     tresult.value = Number(tinput.value);
   }
@@ -238,11 +249,14 @@ function func() {
   } else if (tivalue == "h" && trvalue == "s") {
     tresult.value = Number(tinput.value) * 3600;
   } else if (tivalue == "h" && trvalue == "d") {
-    tresult.value = Number(tinput.value) /24;
+    dr = Number(tinput.value) / 24;
+    tresult.value=dr.toFixed(3);
   } else if (tivalue == "h" && trvalue == "w") {
-    tresult.value = Number(tinput.value) /168;
+    dr = Number(tinput.value) / 168;
+    tresult.value=dr.toFixed(4);
   } else if (tivalue == "h" && trvalue == "y") {
-    tresult.value = Number(tinput.value) /8760;
+    dr = Number(tinput.value) / 8760;
+    tresult.value=dr.toFixed(5);
   } else if (tivalue == "h" && trvalue == "h") {
     tresult.value = Number(tinput.value);
   }
@@ -254,9 +268,11 @@ function func() {
   } else if (tivalue == "d" && trvalue == "s") {
     tresult.value = Number(tinput.value) * 86400;
   } else if (tivalue == "d" && trvalue == "w") {
-    tresult.value = Number(tinput.value) /7;
+    hrr = Number(tinput.value) / 7;
+    tresult.value=hrr.toFixed(3);
   } else if (tivalue == "d" && trvalue == "y") {
-    tresult.value = Number(tinput.value) /365;
+    hrr = Number(tinput.value) / 365;
+    tresult.value=hrr.toFixed(4);
   } else if (tivalue == "d" && trvalue == "d") {
     tresult.value = Number(tinput.value);
   }
@@ -270,7 +286,8 @@ function func() {
   } else if (tivalue == "w" && trvalue == "s") {
     tresult.value = Number(tinput.value) * 604800;
   } else if (tivalue == "w" && trvalue == "y") {
-    tresult.value = Number(tinput.value) /52;
+    wk = Number(tinput.value) / 52;
+    tresult.value=wk.toFixed(3);
   } else if (tivalue == "w" && trvalue == "w") {
     tresult.value = Number(tinput.value);
   }
