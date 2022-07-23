@@ -14,7 +14,7 @@ function func1() {
   krvalue = krestype.value;
 
   if (kivalue == "ce" && krvalue == "fa") {
-    kresult.value = Number(kinput.value) * 1.8 + 32;
+    kresult.value = ((Number(kinput.value) * 9)/5) + 32;
   } else if (kivalue == "ce" && krvalue == "ke") {
     kresult.value = Number(kinput.value) + 273.15;
   } else if (kivalue == "ce" && krvalue == "ce") {
@@ -206,15 +206,15 @@ function func() {
   trvalue = trestype.value;
 
   if (tivalue == "s" && trvalue == "m") {
-    tresult.value = Number(tinput.value) * 0.01666;
+    tresult.value = Number(tinput.value) /60;
   } else if (tivalue == "s" && trvalue == "h") {
-    tresult.value = Number(tinput.value) * 0.000277;
+    tresult.value = Number(tinput.value) /3600;
   } else if (tivalue == "s" && trvalue == "d") {
-    tresult.value = Number(tinput.value) * 0.00001157;
+    tresult.value = Number(tinput.value) /86400;
   } else if (tivalue == "s" && trvalue == "w") {
-    tresult.value = Number(tinput.value) * 0.000001653;
+    tresult.value = Number(tinput.value) /604800;
   } else if (tivalue == "s" && trvalue == "y") {
-    tresult.value = Number(tinput.value) * 0.000000031709;
+    tresult.value = Number(tinput.value) /31536000;
   } else if (tivalue == "s" && trvalue == "s") {
     tresult.value = Number(tinput.value);
   }
@@ -222,13 +222,13 @@ function func() {
   if (tivalue == "m" && trvalue == "s") {
     tresult.value = Number(tinput.value) * 60;
   } else if (tivalue == "m" && trvalue == "h") {
-    tresult.value = Number(tinput.value) * 0.01666;
+    tresult.value = Number(tinput.value) /60;
   } else if (tivalue == "m" && trvalue == "d") {
-    tresult.value = Number(tinput.value) * 0.000694;
+    tresult.value = Number(tinput.value) /1440;
   } else if (tivalue == "m" && trvalue == "w") {
-    tresult.value = Number(tinput.value) * 0.0000992;
+    tresult.value = Number(tinput.value) /10080;
   } else if (tivalue == "m" && trvalue == "y") {
-    tresult.value = Number(tinput.value) * 0.0000019;
+    tresult.value = Number(tinput.value) /525600;
   } else if (tivalue == "m" && trvalue == "m") {
     tresult.value = Number(tinput.value);
   }
@@ -238,11 +238,11 @@ function func() {
   } else if (tivalue == "h" && trvalue == "s") {
     tresult.value = Number(tinput.value) * 3600;
   } else if (tivalue == "h" && trvalue == "d") {
-    tresult.value = Number(tinput.value) * 0.04167;
+    tresult.value = Number(tinput.value) /24;
   } else if (tivalue == "h" && trvalue == "w") {
-    tresult.value = Number(tinput.value) * 0.00595;
+    tresult.value = Number(tinput.value) /168;
   } else if (tivalue == "h" && trvalue == "y") {
-    tresult.value = Number(tinput.value) * 0.0001141;
+    tresult.value = Number(tinput.value) /8760;
   } else if (tivalue == "h" && trvalue == "h") {
     tresult.value = Number(tinput.value);
   }
@@ -254,9 +254,9 @@ function func() {
   } else if (tivalue == "d" && trvalue == "s") {
     tresult.value = Number(tinput.value) * 86400;
   } else if (tivalue == "d" && trvalue == "w") {
-    tresult.value = Number(tinput.value) * 0.143;
+    tresult.value = Number(tinput.value) /7;
   } else if (tivalue == "d" && trvalue == "y") {
-    tresult.value = Number(tinput.value) * 0.00274;
+    tresult.value = Number(tinput.value) /365;
   } else if (tivalue == "d" && trvalue == "d") {
     tresult.value = Number(tinput.value);
   }
@@ -270,7 +270,7 @@ function func() {
   } else if (tivalue == "w" && trvalue == "s") {
     tresult.value = Number(tinput.value) * 604800;
   } else if (tivalue == "w" && trvalue == "y") {
-    tresult.value = Number(tinput.value) * 0.01917;
+    tresult.value = Number(tinput.value) /52;
   } else if (tivalue == "w" && trvalue == "w") {
     tresult.value = Number(tinput.value);
   }
@@ -282,7 +282,7 @@ function func() {
   } else if (tivalue == "y" && trvalue == "d") {
     tresult.value = Number(tinput.value) * 365;
   } else if (tivalue == "y" && trvalue == "w") {
-    tresult.value = Number(tinput.value) * 52.14;
+    tresult.value = Number(tinput.value) * 52;
   } else if (tivalue == "y" && trvalue == "s") {
     tresult.value = Number(tinput.value) * 31536000;
   } else if (tivalue == "y" && trvalue == "y") {
