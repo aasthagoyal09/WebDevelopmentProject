@@ -14,30 +14,30 @@ function func1(){
     krvalue=krestype.value;
     
     if(kivalue=="ce" && krvalue=="fa"){
-        kresult.value=Number(kinput.value)*33.8;
+        kresult.value=(Number(kinput.value)*1.8)+32;
     }
     else if(kivalue=="ce" && krvalue=="ke"){
-        kresult.value=Number(kinput.value)*274.15;
+        kresult.value=Number(kinput.value)+273.15;
     }
     else if(kivalue=="ce" && krvalue=="ce"){
         kresult.value=Number(kinput.value);
     }
 
     if(kivalue=="fa" && krvalue=="ce"){
-        kresult.value=Number(kinput.value)*-17.22;
+        kresult.value=(Number(kinput.value)-32)*5/9;
     }
     else if(kivalue=="fa" && krvalue=="ke"){
-        kresult.value=Number(kinput.value)*255.927;
+        kresult.value=((Number(kinput.value)-32)*5/9)+273.15;
     }
     else if(kivalue=="fa" && krvalue=="fa"){
         kresult.value=Number(kinput.value);
     }
 
     if(kivalue=="ke" && krvalue=="fa"){
-        kresult.value=Number(kinput.value)*-457.87;
+        kresult.value=((Number(kinput.value)-273)*1.8)+32;
     }
     else if(kivalue=="ke" && krvalue=="ce"){
-        kresult.value=Number(kinput.value)*-272.15;
+        kresult.value=Number(kinput.value)-273.15;
     }
     else if(kivalue=="ke" && krvalue=="ke"){
         kresult.value=Number(kinput.value);
